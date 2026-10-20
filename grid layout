@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Grid Layout</title>
+<style>
+ 
+  .layout {
+    gap:5px;
+    height: 97vh;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas:
+    "navbar navbar navbar navbar"
+    "sidebar main main main"
+    "sidebar c1 c2 c3"
+    "sidebar footer footer footer";
+    background: white;
+    padding: 6px;
+    border-radius: 8px;
+  }
+
+
+  .navbar   { grid-area: navbar;  background: #6b147f; }
+  .sidebar  { grid-area: sidebar; background: #8d0c71; }
+  .main     { grid-area: main;    background: #c674c0; }
+  .c1       { grid-area: c1;      background: #a51968; }
+  .c2       { grid-area: c2;      background: #501f57; }
+  .c3       { grid-area: c3;      background: #a405a4; }
+  .footer   { grid-area: footer;  background: #e969bc; }
+
+
+  .layout div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: bold;
+    color: #141414;
+  }
+</style>
+</head>
+<body>
+
+
+  <div class="layout">
+    <div class="navbar">NAVBAR</div>
+    <div class="sidebar">SIDEBAR</div>
+    <div class="main">MAIN</div>
+    <div class="c1">CONTENT 1</div>
+    <div class="c2">CONTENT 2</div>
+    <div class="c3">CONTENT 3</div>
+    <div class="footer">FOOTER</div>
+  </div>
+
+
+</body>
+</html>
